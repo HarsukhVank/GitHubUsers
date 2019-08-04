@@ -1,9 +1,9 @@
 
-package com.harsukh.githubusers.model;
+package com.harsukh.githubusers.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Item {
+public class UsersListModel {
 
     @SerializedName("login")
     private String login;

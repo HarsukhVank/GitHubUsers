@@ -1,12 +1,12 @@
 
-package com.harsukh.githubusers.model;
+package com.harsukh.githubusers.models;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 
-public class Users {
+public class GitUsersResponseModel {
     @SerializedName("total_count")
     private Integer totalCount;
 
@@ -14,7 +14,7 @@ public class Users {
     private Boolean incompleteResults;
 
     @SerializedName("items")
-    private List<Item> items = null;
+    private List<UsersListModel> usersListModels;
 
     public Integer getTotalCount() {
         return totalCount;
@@ -32,12 +32,12 @@ public class Users {
         this.incompleteResults = incompleteResults;
     }
 
-    public List<Item> getItems() {
-        return items;
+    public List<UsersListModel> getUsersListModels() {
+        return usersListModels;
     }
 
-    public void setItems(List<Item> items) {
-        this.items = items;
+    public void setUsersListModels(List<UsersListModel> usersListModels) {
+        this.usersListModels = usersListModels;
     }
 
 }
