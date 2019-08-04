@@ -6,13 +6,44 @@
     android:layout_height="match_parent"
     tools:context="com.harsukh.githubusers.UserSearchActivity">
 
-    <TextView
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search"
+        app:queryHint="Search Users from GitHub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/name_az"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/search"
+        android:textSize="11sp"
+        android:text="Name(A-Z)" />
+    <Button
+        android:id="@+id/name_za"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        app:layout_constraintTop_toBottomOf="@+id/search"
+        app:layout_constraintLeft_toRightOf="@+id/name_az"
+        android:text="Name(Z-A)" />
+    <Button
+        android:id="@+id/rank_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/search"
+        app:layout_constraintLeft_toRightOf="@+id/name_za"
+        android:textSize="11sp"
+        android:text="Rank Top" />
+    <Button
+        android:id="@+id/rank_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/search"
+        app:layout_constraintLeft_toRightOf="@+id/rank_top"
+        android:textSize="11sp"
+        android:text="Rank Bottom" />
 
 </android.support.constraint.ConstraintLayout>
